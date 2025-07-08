@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NekoToys - Figuras Kawaii</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+
+<body class="bg-white text-dark d-flex flex-column min-vh-100">
+
+    <nav class="navbar bg-black text-white shadow-sm py-2 px-3 px-md-5">
+        <div class="container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html" title="Volver al inicio">
+                <img src="img/nekotoys-logo.png" alt="NekoToys Logo" style="height: 60px; width: auto;">
+            </a>
+
+            <!-- Botones de navegación -->
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-2">
+                <a href="index.html" class="btn text-white p-0 icono-nav" title="Inicio">🏠</a>
+                <button class="btn text-white p-0 icono-nav" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasFavoritos" title="Favoritos">❤️</button>
+                <a href="v-producto/carrito.html" class="btn text-white p-0 icono-nav" title="Carrito">🛒</a>
+                <button id="btn-instalar" class="btn btn-morado btn-sm" style="display: none;" title="Instalar App">
+                    📲 Instalar App
+                </button>
+            </div>
+
+        </div>
+    </nav>
+
+        <header class="container-fluid p-0">
+            <div class="banner-wrapper">
+                <img src="./img/banner-1.svg" alt="Banner NekoToys" class="w-100 d-none d-md-block">
+                <img src="./img/banner-1-mobile.svg" alt="Banner móvil" class="w-100 d-block d-md-none">
+            </div>
+        </header>
+    <main class="flex-grow-1">
+
+        <section class="container my-5 p-4 text-center rounded bg-white">
+            <h2 class="text-morado fw-bold mb-3 ">¿Quiénes somos?</h2>
+            <p class="fs-5 text-secondary">
+                En <span class="fw-semibold text-morado">NekoToys</span> somos amantes de lo kawaii y ofrecemos figuras
+                coleccionables que llenan de ternura y estilo tu espacio. Cada pieza está seleccionada con mucho amor
+                para los fans del diseño japonés y la cultura pop
+            </p>
+            <p class="fs-5 text-secondary text-morado fw-bold">¡Descubrí nuestro catálogo y encontrá tu próxima
+                figura favorita!</p>
+        </section>
+
+        <section class="container text-center my-5">
+            <div class="mb-3">
+                <h2 class="fw-bold text-lavender">Explorá nuestras categorías</h2>
+            </div>
+            <div id="botones-categorias" class="d-flex flex-wrap justify-content-center gap-3">
+                <button class="btn btn-lavender active" data-categoria="Todos">Todos</button>
+                <button class="btn btn-lavender px-4" data-categoria="Más vendidos">🔥 Más vendidos</button>
+            </div>
+        </section>
+
+        <div class="container mb-4">
+            <div class="input-group">
+                <input type="text" class="form-control" id="input-busqueda" placeholder="Buscar figuras..."
+                    autocomplete="off">
+                <button class="btn btn-outline-secondary" id="btn-limpiar-busqueda" title="Limpiar búsqueda">✖</button>
+            </div>
+        </div>
+
+        <div>
+            <div id="productos-container" class="row g-4 px-3 mx-0 justify-content-center">
+            </div>
+            </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p class="mb-0">© 2025 NekoToys. Todos los derechos reservados. 🐱</p>
+    </footer>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasFavoritos"
+        aria-labelledby="offcanvasFavoritosLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasFavoritosLabel">💜 Tus favoritos</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul id="favoritos-lista" class="list-unstyled">
+            </ul>
+        </div>
+    </div>
+
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="module" src="js/catalogo.js"></script>
+    <script type="module" src="js/favoritos.js"></script>
+</body>
+
+</html>

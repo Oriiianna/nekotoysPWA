@@ -1,0 +1,144 @@
+[
+  {
+    "id": 1,
+    "nombre": "Rengoku Chibi",
+    "anime": "Demon Slayer",
+    "precio": 15999,
+    "imagenes": [
+      "img/img-figuras/rengoku.png",
+      "img/img-figuras/rengoku-1.png"
+    ],
+    "stock": 10,
+    "valoracion": 4.8,
+    "categorias": ["Chibi", "Acción", "Más vendidos"]
+  },
+  {
+    "id": 2,
+    "nombre": "Zenitsu Agatsuma",
+    "anime": "Demon Slayer",
+    "precio": 13999,
+    "imagenes": [
+      "img/img-figuras/zenitsu.png",
+      "img/img-figuras/zenitsu-2.png"
+    ],
+    "stock": 10,
+    "valoracion": 4.4,
+    "categorias": ["Chibi", "Acción", "Más vendidos"]
+  },
+  {
+    "id": 3,
+    "nombre": "Tomioka",
+    "anime": "Demon Slayer",
+    "precio": 15999,
+    "imagenes": [
+      "img/img-figuras/tomioka.png",
+      "img/img-figuras/tomioka-2.png",
+      "img/img-figuras/tomioka-3.png"
+    ],
+    "stock": 10,
+    "valoracion": 4.1,
+    "categorias": ["Chibi", "Acción"]
+  },
+  {
+    "id": 4,
+    "nombre": "Uzui",
+    "anime": "Demon Slayer",
+    "precio": 8999,
+    "imagenes": [
+      "img/img-figuras/uzui.png",
+      "img/img-figuras/uzui-2.png",
+      "img/img-figuras/uzui-3.png"
+    ],
+    "stock": 10,
+    "valoracion": 4.8,
+    "categorias": ["Chibi", "Acción"]
+  },
+  {
+    "id": 5,
+    "nombre": "Inosuke Hashibira",
+    "anime": "Demon Slayer",
+    "precio": 11999,
+    "imagenes": [
+      "img/img-figuras/inosuke.png",
+      "img/img-figuras/inosuke-2.png",
+      "img/img-figuras/inosuke-3.png"
+    ],
+    "stock": 10,
+    "valoracion": 4.8,
+    "categorias": ["Chibi", "Acción", "Más vendidos"]
+  },
+  {
+    "id": 6,
+    "nombre": "Kirby",
+    "anime": "Kirby",
+    "precio": 12999,
+    "imagenes": ["img/img-figuras/kirby.png"],
+    "stock": 10,
+    "valoracion": 4.8,
+    "categorias": ["Chibi", "Acción", "Más vendidos"]
+  },
+  {
+    "id": 7,
+    "nombre": "Sesshomaru",
+    "anime": "Inuyasha",
+    "precio": 17999,
+    "imagenes": [
+      "img/img-figuras/sesshomaru.png",
+      "img/img-figuras/sesshomaru-2.png",
+      "img/img-figuras/sesshomaru-3.png"
+    ],
+    "stock": 10,
+    "valoracion": 4.8,
+    "categorias": ["Chibi", "Acción", "Más vendidos"]
+  },
+  {
+    "id": 8,
+    "nombre": "Izuku",
+    "anime": "My Hero Academia",
+    "precio": 15999,
+    "imagenes": ["img/img-figuras/Izuku.png", "img/img-figuras/Izuku-1.png"],
+    "stock": 10,
+    "valoracion": 4.8,
+    "categorias": ["Chibi", "Acción", "Más vendidos"]
+  },
+  {
+    "id": 9,
+    "nombre": "Yugioh",
+    "anime": "Yugioh",
+    "precio": 10999,
+    "imagenes": ["img/img-figuras/Yugioh.png", "img/img-figuras/Yugioh-1.png"],
+    "stock": 10,
+    "valoracion": 4.8,
+    "categorias": ["Chibi", "Acción", "Más vendidos"]
+  },
+  {
+    "id": 10,
+    "nombre": "Nezuko",
+    "anime": "Yugioh",
+    "precio": 10999,
+    "imagenes": ["img/img-figuras/Nezuko.png"],
+    "stock": 10,
+    "valoracion": 4.8,
+    "categorias": ["Chibi", "Acción", "Más vendidos"]
+  },
+  {
+    "id": 11,
+    "nombre": "Anya",
+    "anime": "Spy x Family",
+    "precio": 9999,
+    "imagenes": ["img/img-figuras/Anya.png", "img/img-figuras/Anya-1.png"],
+    "stock": 10,
+    "valoracion": 4.8,
+    "categorias": ["Chibi", "Acción", "Más vendidos"]
+  },
+  {
+    "id": 12,
+    "nombre": "Goku",
+    "anime": "Dragon Ball",
+    "precio": 18999,
+    "imagenes": ["img/img-figuras/goku.png", "img/img-figuras/goku-1.png"],
+    "stock": 10,
+    "valoracion": 4.8,
+    "categorias": ["Chibi", "Acción", "Más vendidos"]
+  }
+]
