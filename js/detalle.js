@@ -1,4 +1,4 @@
-import { toggleFavorito, obtenerFavoritos, iniciarFavoritos } from '../js/favoritos.js';
+import { toggleFavorito, obtenerFavoritos, iniciarFavoritos } from './favoritos.js';
 
 const basePath = "../";
 

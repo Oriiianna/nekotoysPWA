@@ -1,22 +1,24 @@
 const CACHE_NAME = 'nekotoys-v1';
+const BASE_PATH = '/nekotoysPWA/';
+
 const ASSETS = [
-    './index.html',
-    './v-producto/detalle.html',
-    './v-producto/checkout.html',
-    './v-producto/carrito.html',
-    './css/style.css',
-    './img/banner-1-mobile.svg',
-    './img/banner-1.svg',
-    './img/nekotoys-logo.png',
-    './img/kirby-offline.gif',
-    './img/kirby-compra.gif',
-    './js/catalogo.js',
-    './js/detalle.js',
-    './js/carrito.js',
-    './js/favoritos.js',
-    './js/main.js',
-    './offline.html',
-    './audio/click.mp3'
+    BASE_PATH + 'index.html',
+    BASE_PATH + 'v-producto/detalle.html',
+    BASE_PATH + 'v-producto/checkout.html',
+    BASE_PATH + 'v-producto/carrito.html',
+    BASE_PATH + 'css/style.css',
+    BASE_PATH + 'img/banner-1-mobile.svg',
+    BASE_PATH + 'img/banner-1.svg',
+    BASE_PATH + 'img/nekotoys-logo.png',
+    BASE_PATH + 'img/kirby-offline.gif',
+    BASE_PATH + 'img/kirby-compra.gif',
+    BASE_PATH + 'js/catalogo.js',
+    BASE_PATH + 'js/detalle.js',
+    BASE_PATH + 'js/carrito.js',
+    BASE_PATH + 'js/favoritos.js',
+    BASE_PATH + 'js/main.js',
+    BASE_PATH + 'offline.html',
+    BASE_PATH + 'audio/click.mp3'
 ];
 
 self.addEventListener('install', event => {
@@ -45,21 +47,22 @@ self.addEventListener('fetch', event => {
     if (event.request.method !== 'GET') return;
 
     event.respondWith(
-        caches.match(event.request)
-            .then(cached => {
-                if (cached) return cached;
-                return fetch(event.request)
-                    .then(response => {
-                        const cloned = response.clone();
-                        caches.open(CACHE_NAME)
-                            .then(cache => cache.put(event.request, cloned));
-                        return response;
-                    })
-                    .catch(() => {
-                        if (event.request.mode === 'navigate') {
-                            return caches.match('./offline.html');
-                        }
-                    });
+        fetch(event.request)
+            .then(response => {
+                if (response && response.status === 200 && response.type === 'basic') {
+                    const responseClone = response.clone();
+                    caches.open(CACHE_NAME)
+                        .then(cache => {
+                            cache.put(event.request, responseClone);
+                        });
+                }
+                return response;
+            })
+            .catch(() => {
+                if (event.request.mode === 'navigate') {
+                    return caches.match(BASE_PATH + 'offline.html');
+                }
+                return caches.match(event.request);
             })
     );
 });
