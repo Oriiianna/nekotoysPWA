@@ -1,5 +1,5 @@
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/nekotoys/sw.js')
+    navigator.serviceWorker.register('./sw.js')
         .then(() => console.log("SW registrado correctamente"))
         .catch(err => console.error("[SW] Error al registrar:", err));
 }
